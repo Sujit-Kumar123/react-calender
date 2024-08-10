@@ -1,0 +1,13 @@
+version: '27.0.3'
+
+services:
+  web:
+    image: my-react-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - GENERATE_SOURCEMAP=false
+    ports:
+      - "3000:3000"
+    restart: always
